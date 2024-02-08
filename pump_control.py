@@ -38,6 +38,3 @@ def run_pump(class_index):
 
     # Cleanup GPIO to release resources
     GPIO.cleanup()
-
-# Example usage:
-run_pump(1)  # Run pump for class 1
