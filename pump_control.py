@@ -1,10 +1,6 @@
 import RPi.GPIO as GPIO
 import time
 
-# Define pump pins
-PUMP_1_PIN = 22
-PUMP_2_PIN = 24
-PUMP_3_PIN = 26
 
 def run_pump(class_index):
     GPIO.setmode(GPIO.BOARD)

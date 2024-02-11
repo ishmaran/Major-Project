@@ -1,7 +1,7 @@
 import cv2
 import time
 
-def capture_image(camera_index=0, resolution=(640, 480)):
+def capture_image(camera_index=0, resolution=(640, 640)):
     # Initialize the USB camera
     cap = cv2.VideoCapture(camera_index)
 
