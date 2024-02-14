@@ -3,6 +3,7 @@ from tensorflow import keras
 import numpy as np
 import torch
 from PIL import Image
+import time
 
 def predict_class(image_path):
     # Load the saved model
@@ -41,10 +42,14 @@ def detect_leaf(input_image_path):
 
     # Crop the bounding box
     cropped_image = image.crop((x_min, y_min, x_max, y_max))
-    return cropped_image
+    
+
+    timestamp = time.strftime("%Y%m%d%H%M%S")
+    output_cropped_image_path = f"Leaf/cropped_image_{timestamp}.jpg"
 
     # # Save the cropped image
-    # cropped_image.save(output_cropped_image_path)
+    cropped_image.save(output_cropped_image_path)
+    return output_cropped_image_path
 
     # # Optionally, display the cropped image
     # cropped_image.show()
