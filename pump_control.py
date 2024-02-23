@@ -1,6 +1,25 @@
 import RPi.GPIO as GPIO
 import time
 
+# Define GPIO pins for pumps
+PUMP_1_PIN = 22
+PUMP_2_PIN = 24
+PUMP_3_PIN = 26
+
+def initialize_pumps():
+    # Set the mode to BCM
+    GPIO.setmode(GPIO.BCM)
+    
+    # Set up the GPIO pins for pumps
+    GPIO.setup(PUMP_1_PIN, GPIO.OUT)
+    GPIO.setup(PUMP_2_PIN, GPIO.OUT)
+    GPIO.setup(PUMP_3_PIN, GPIO.OUT)
+
+    # Optionally, you can set the initial state for the pumps
+    GPIO.output(PUMP_1_PIN, GPIO.LOW)
+    GPIO.output(PUMP_2_PIN, GPIO.LOW)
+    GPIO.output(PUMP_3_PIN, GPIO.LOW)
+
 
 def run_pump(class_index):
     GPIO.setmode(GPIO.BOARD)
