@@ -41,19 +41,19 @@ def rotate_servo(servo_pwm, target_angle):
     else:
         print("Invalid angle. Servo angles must be between 0 and 180 degrees.")
 
-def camera_angle(servo_pwm):
-    """Calculates the current angle of a servo.
+# def camera_angle(servo_pwm):
+#     """Calculates the current angle of a servo.
 
-    Args:
-        servo_pwm: The PWM object controlling the servo.
+#     Args:
+#         servo_pwm: The PWM object controlling the servo.
 
-    Returns:
-        The current servo angle in degrees.
-    """
+#     Returns:
+#         The current servo angle in degrees.
+#     """
 
-    current_duty_cycle = servo_pwm.get_duty_cycle()
-    angle = ((current_duty_cycle - 2) * 18) / 1 + 2
-    return angle
+#     current_duty_cycle = servo_pwm.get_duty_cycle()
+#     angle = ((current_duty_cycle - 2) * 18) / 1 + 2
+#     return angle
 
 def cleanup_servos(servo_pwm_camera, servo_pwm_nozzle):
     """Stops the servo motors and cleans up GPIO resources."""
